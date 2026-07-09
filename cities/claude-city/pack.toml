@@ -1,0 +1,14 @@
+#:schema https://raw.githubusercontent.com/gastownhall/gascity/main/docs/reference/schema/pack-schema.json
+[pack]
+name = "claude-city"
+schema = 2
+
+[imports]
+[imports.bd]
+source = "https://github.com/gastownhall/gascity.git//examples/bd"
+[imports.core]
+source = "https://github.com/gastownhall/gascity.git//internal/bootstrap/packs/core"
+[imports.cc]
+source = "../../packs/core-city"
+[imports.gc]
+source = "https://github.com/gastownhall/gascity-packs.git//gascity"

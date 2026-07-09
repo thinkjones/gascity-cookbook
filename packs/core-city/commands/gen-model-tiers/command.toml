@@ -1,0 +1,1 @@
+description = "Emit a city TOML fragment of [[patches.agent]] blocks assigning each //gascity/roles role its model tier, for every project rig in the current city. Redirect into an included fragment: gc cc gen-model-tiers > model-tiers.toml"

@@ -1,0 +1,7 @@
+#:schema ../agent.schema.json
+name = "mayor"
+provider = "deep-thinker"
+append_fragments = ["mayor-operating-rhythm", "efficient-routing-rules", "sdlc-mayor-coding-rules"]
+idle_timeout = "1h"
+wake_mode = "fresh"
+max_active_sessions = 1

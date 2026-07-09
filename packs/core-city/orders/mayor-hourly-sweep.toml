@@ -1,0 +1,6 @@
+[order]
+description = "Wake the mayor once an hour to run a status sweep and verify running convoys in each rig are still processing. Cooldown sets the cadence."
+trigger = "cooldown"
+interval = "1h"
+exec = "bash $GC_PACK_DIR/assets/scripts/mayor-hourly-sweep.sh"
+timeout = "30s"

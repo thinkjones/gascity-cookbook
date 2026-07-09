@@ -1,0 +1,24 @@
+#:schema https://raw.githubusercontent.com/gastownhall/gascity/main/docs/reference/schema/city-schema.json
+
+# Per-role model tiers are GENERATED from core-city/model-tiers.base.toml.
+# Regenerate after changing rigs/roles/tiers:  gc cc gen-model-tiers > model-tiers.toml
+include = ["model-tiers.toml"]
+
+[workspace]
+provider = "antigravity"                 # the default provider for this city
+install_agent_hooks = ["antigravity"]    # antigravity must be listed to get its managed hooks
+
+# Bind the generic tier names to the Gemini/Antigravity family (defined in core-city).
+# Agents and formulas only ever reference fast-worker / solid-worker / deep-thinker.
+[providers.fast-worker]   { base = "antigravity-fast-worker" }
+[providers.solid-worker]  { base = "antigravity-solid-worker" }
+[providers.deep-thinker]  { base = "antigravity-deep-thinker" }
+
+[[rigs]]
+name = "example-service"
+default_branch = "main"
+# Register the actual project path once, from the city dir:
+#   gc rig add /absolute/path/to/example-service
+
+[rigs.imports.gc]
+source = "https://github.com/gastownhall/gascity-packs.git//gascity/roles"

@@ -1,0 +1,20 @@
+#:schema https://raw.githubusercontent.com/gastownhall/gascity/main/docs/reference/schema/city-schema.json
+
+# Per-role model tiers are GENERATED from core-city/model-tiers.base.toml.
+include = ["model-tiers.toml"]
+
+[workspace]
+provider = "claude"                      # Claude auto-installs its hooks — no install_agent_hooks needed
+
+# Same generic tiers, bound to the Claude family (Haiku / Sonnet / Opus).
+[providers.fast-worker]   { base = "claude-fast-worker" }
+[providers.solid-worker]  { base = "claude-solid-worker" }
+[providers.deep-thinker]  { base = "claude-deep-thinker" }
+
+[[rigs]]
+name = "example-service"
+default_branch = "main"
+# gc rig add /absolute/path/to/example-service
+
+[rigs.imports.gc]
+source = "https://github.com/gastownhall/gascity-packs.git//gascity/roles"

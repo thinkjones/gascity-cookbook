@@ -1,0 +1,65 @@
+#:schema https://raw.githubusercontent.com/gastownhall/gascity/main/docs/reference/schema/pack-schema.json
+[pack]
+name = "core-city-pack"
+schema = 2
+version = "2"
+
+[providers]
+[providers.claude]
+base = "builtin:claude"
+
+[providers.claude-fast-worker]
+base = "builtin:claude"
+option_defaults = { model = "haiku" }   # or: args = ["--model", "claude-sonnet-4-6"]
+
+[providers.claude-solid-worker]
+base = "builtin:claude"
+option_defaults = { model = "sonnet" }
+
+[providers.claude-deep-thinker]
+base = "builtin:claude"
+option_defaults = { model = "opus" }
+
+[providers.kimi]
+# Kimi doesn't have different models
+base = "builtin:kimi"
+display_name = "Kimi Custom"
+command = "kimi"
+path_check = "kimi"
+supports_acp = false
+args = ["--yolo"]
+
+[providers.kimi-fast-worker]
+base = "kimi"
+
+[providers.kimi-solid-worker]
+base = "kimi"
+
+[providers.kimi-deep-thinker]
+base = "kimi"
+
+[providers.antigravity]
+base = "builtin:antigravity"
+args = ["--dangerously-skip-permissions", "--model", "Gemini 3.5 Flash (High)"]
+
+[providers.antigravity-fast-worker]
+base = "builtin:antigravity"
+args = ["--dangerously-skip-permissions", "--model", "Gemini 3.5 Flash (Low)"]
+
+[providers.antigravity-solid-worker]
+base = "builtin:antigravity"
+args = ["--dangerously-skip-permissions", "--model", "Gemini 3.1 Pro (High)"]
+
+[providers.antigravity-deep-thinker]
+base = "builtin:antigravity"
+args = ["--dangerously-skip-permissions", "--model", "Gemini 3.1 Pro (High)"]
+
+[imports]
+[imports.gc]
+source = "https://github.com/gastownhall/gascity-packs.git//gascity"
+version = "sha:55acb481229103485ba995bae6cbf283d9618af8"
+
+[[named_session]]
+template = "mayor"
+mode = "always"
+scope = "city"

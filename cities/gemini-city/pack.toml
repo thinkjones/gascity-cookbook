@@ -1,0 +1,17 @@
+#:schema https://raw.githubusercontent.com/gastownhall/gascity/main/docs/reference/schema/pack-schema.json
+[pack]
+name = "gemini-city"
+schema = 2
+
+[imports]
+# Base beads + core bootstrap packs (control-dispatcher, bd store, etc.)
+[imports.bd]
+source = "https://github.com/gastownhall/gascity.git//examples/bd"
+[imports.core]
+source = "https://github.com/gastownhall/gascity.git//internal/bootstrap/packs/core"
+# The shared cookbook pack (providers, mayor, tiers, commands, orders).
+[imports.cc]
+source = "../../packs/core-city"
+# Workflow formulas + the gc.mayor coordinator skill.
+[imports.gc]
+source = "https://github.com/gastownhall/gascity-packs.git//gascity"

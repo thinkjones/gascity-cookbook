@@ -1,0 +1,1 @@
+description = "Delete (close) all mail currently in a recipient's inbox (defaults to 'human'). Flushes what's there now; does not stop patrol-generated advisories from regenerating."

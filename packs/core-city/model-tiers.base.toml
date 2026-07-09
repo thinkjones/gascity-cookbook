@@ -1,0 +1,26 @@
+# Base model-tier assignments for the //gascity/roles roles.
+#
+# This is DATA, not a city fragment — it is not imported directly. The
+# `gc cc gen-model-tiers` command reads it and expands each role across the
+# current city's project rigs into an included `model-tiers.toml` fragment.
+#
+# Retune here, then regenerate per city:
+#   cd cities/<city> && gc cc gen-model-tiers > model-tiers.toml
+#
+# Tiers: deep-thinker = planning/design/decomposition + design review;
+#        solid-worker = implementation, code review, triage;
+#        fast-worker  = deterministic/mechanical (finalize, publish).
+
+[tiers]
+requirements-planner           = "deep-thinker"
+design-author                  = "deep-thinker"
+task-decomposer                = "deep-thinker"
+design-implementation-reviewer = "deep-thinker"
+design-test-risk-reviewer      = "deep-thinker"
+implementation-worker          = "solid-worker"
+implementation-reviewer        = "solid-worker"
+gap-analyst                    = "solid-worker"
+review-synthesizer             = "solid-worker"
+issue-triager                  = "solid-worker"
+run-operator                   = "fast-worker"
+publisher                      = "fast-worker"
