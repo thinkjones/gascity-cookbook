@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="96" viewBox="0 0 1200 96" role="img" aria-labelledby="title desc">
+  <title id="title">Gas City Cookbook - Setup</title>
+  <desc id="desc">Document header for the Gas City Cookbook, with the three tier markers: fast-worker, solid-worker, deep-thinker.</desc>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#000000" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1L9 5L1 9" fill="none" stroke="#64748b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="96" rx="4" fill="#f8fafc"/>
+  <rect width="1200" height="96" rx="4" fill="url(#grid)"/>
+  <rect x="0.5" y="0.5" width="1199" height="95" rx="4" fill="none" stroke="#e2e8f0"/>
+  <text x="48" y="56" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="20" font-weight="500" fill="#e85d26" letter-spacing="3">GAS CITY COOKBOOK // SETUP</text>
+  <circle cx="800" cy="49" r="5" fill="#54C8CE"/>
+  <text x="814" y="55" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="18" font-weight="400" fill="#64748b">fast</text>
+  <circle cx="924" cy="49" r="5" fill="#e85d26"/>
+  <text x="938" y="55" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="18" font-weight="400" fill="#64748b">solid</text>
+  <circle cx="1056" cy="49" r="5" fill="#EB5570"/>
+  <text x="1070" y="55" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="18" font-weight="400" fill="#64748b">deep</text>
+</svg>

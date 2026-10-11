@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="../assets/readme/strip-recipe-3.svg" width="100%" alt="Gas City Cookbook: recipe 3 of 3">
+</p>
+
 # Recipe: per-role model tiers (generated)
 
 **Goal:** make each workflow step run on the right model — planning on the strong tier,
@@ -89,3 +93,7 @@ cd cities/<city> && gc cc gen-model-tiers > model-tiers.toml
 ```
 
 Add a rig → regenerate; it's picked up automatically.
+
+---
+
+[← The mayor](the-mayor.md) · [README](../README.md) · Next: [Setup →](../SETUP.md)

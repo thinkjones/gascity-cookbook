@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/readme/strip-setup.svg" width="100%" alt="Gas City Cookbook: setup">
+</p>
+
 # Setup: instantiate a new city
 
 How to stand up a new Gas City deployment from this cookbook — the manual prerequisites,
@@ -61,9 +65,12 @@ provider = "antigravity"                       # default provider (or "claude", 
 install_agent_hooks = ["antigravity"]          # ONLY needed for antigravity (see §7)
 
 # Bind the generic tiers to a model family (concretes are defined in core-city):
-[providers.fast-worker]   { base = "antigravity-fast-worker" }
-[providers.solid-worker]  { base = "antigravity-solid-worker" }
-[providers.deep-thinker]  { base = "antigravity-deep-thinker" }
+[providers.fast-worker]
+base = "antigravity-fast-worker"
+[providers.solid-worker]
+base = "antigravity-solid-worker"
+[providers.deep-thinker]
+base = "antigravity-deep-thinker"
 
 [[rigs]]
 name = "my-service"
@@ -84,10 +91,14 @@ name = "my-city"
 schema = 2
 
 [imports]
-[imports.bd]   { source = "https://github.com/gastownhall/gascity.git//examples/bd" }
-[imports.core] { source = "https://github.com/gastownhall/gascity.git//internal/bootstrap/packs/core" }
-[imports.cc]   { source = "../../packs/core-city" }                                   # this cookbook's pack
-[imports.gc]   { source = "https://github.com/gastownhall/gascity-packs.git//gascity" } # formulas + gc.mayor skill
+[imports.bd]
+source = "https://github.com/gastownhall/gascity.git//examples/bd"
+[imports.core]
+source = "https://github.com/gastownhall/gascity.git//internal/bootstrap/packs/core"
+[imports.cc]
+source = "../../packs/core-city"  # this cookbook's pack
+[imports.gc]
+source = "https://github.com/gastownhall/gascity-packs.git//gascity"  # formulas + gc.mayor skill
 ```
 
 Adjust the `../../packs/core-city` path to wherever `core-city` lives relative to your city.
@@ -157,3 +168,7 @@ value) → `gc reload`.
 - A scheduled hourly mayor sweep (an `order`).
 
 Everything is config — nothing here is hardcoded into `gc`.
+
+---
+
+[← README](README.md) · [Recipes](README.md#recipes) · [Contributing](CONTRIBUTING.md)

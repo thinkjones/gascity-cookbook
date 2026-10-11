@@ -10,9 +10,12 @@ install_agent_hooks = ["antigravity"]    # antigravity must be listed to get its
 
 # Bind the generic tier names to the Gemini/Antigravity family (defined in core-city).
 # Agents and formulas only ever reference fast-worker / solid-worker / deep-thinker.
-[providers.fast-worker]   { base = "antigravity-fast-worker" }
-[providers.solid-worker]  { base = "antigravity-solid-worker" }
-[providers.deep-thinker]  { base = "antigravity-deep-thinker" }
+[providers.fast-worker]
+base = "antigravity-fast-worker"
+[providers.solid-worker]
+base = "antigravity-solid-worker"
+[providers.deep-thinker]
+base = "antigravity-deep-thinker"
 
 [[rigs]]
 name = "example-service"

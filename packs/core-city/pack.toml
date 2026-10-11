@@ -48,7 +48,7 @@ args = ["--dangerously-skip-permissions", "--model", "Gemini 3.5 Flash (Low)"]
 
 [providers.antigravity-solid-worker]
 base = "builtin:antigravity"
-args = ["--dangerously-skip-permissions", "--model", "Gemini 3.1 Pro (High)"]
+args = ["--dangerously-skip-permissions", "--model", "Gemini 3.1 Pro (Low)"]
 
 [providers.antigravity-deep-thinker]
 base = "builtin:antigravity"

@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="../assets/readme/strip-recipe-1.svg" width="100%" alt="Gas City Cookbook: recipe 1 of 3">
+</p>
+
 # Recipe: multi-provider model tiers
 
 **Goal:** run different cities on different model providers (Gemini/Antigravity, Claude, …)
@@ -13,14 +17,30 @@ single place a model ID appears.
 
 ```toml
 # Antigravity (Gemini) family
-[providers.antigravity-fast-worker]   base = "builtin:antigravity"  args = ["--model", "Gemini 3.5 Flash (Low)"]
-[providers.antigravity-solid-worker]  base = "builtin:antigravity"  args = ["--model", "Gemini 3.1 Pro (Low)"]
-[providers.antigravity-deep-thinker]  base = "builtin:antigravity"  args = ["--model", "Gemini 3.1 Pro (High)"]
+[providers.antigravity-fast-worker]
+base = "builtin:antigravity"
+args = ["--model", "Gemini 3.5 Flash (Low)"]
+
+[providers.antigravity-solid-worker]
+base = "builtin:antigravity"
+args = ["--model", "Gemini 3.1 Pro (Low)"]
+
+[providers.antigravity-deep-thinker]
+base = "builtin:antigravity"
+args = ["--model", "Gemini 3.1 Pro (High)"]
 
 # Claude family
-[providers.claude-fast-worker]   base = "builtin:claude"  option_defaults = { model = "haiku" }
-[providers.claude-solid-worker]  base = "builtin:claude"  option_defaults = { model = "sonnet" }
-[providers.claude-deep-thinker]  base = "builtin:claude"  option_defaults = { model = "opus" }
+[providers.claude-fast-worker]
+base = "builtin:claude"
+option_defaults = { model = "haiku" }
+
+[providers.claude-solid-worker]
+base = "builtin:claude"
+option_defaults = { model = "sonnet" }
+
+[providers.claude-deep-thinker]
+base = "builtin:claude"
+option_defaults = { model = "opus" }
 ```
 
 ### 2. Per-city aliases — bind the generic tier to a family (`base` chaining)
@@ -30,10 +50,23 @@ the three generic tier names. City-level providers override imported ones ("pack
 city wins").
 
 ```toml
-# cities/gemini-city/city.toml            # cities/claude-city/city.toml
-[providers.fast-worker]  { base = "antigravity-fast-worker" }   [providers.fast-worker]  { base = "claude-fast-worker" }
-[providers.solid-worker] { base = "antigravity-solid-worker" }  [providers.solid-worker] { base = "claude-solid-worker" }
-[providers.deep-thinker] { base = "antigravity-deep-thinker" }  [providers.deep-thinker] { base = "claude-deep-thinker" }
+# cities/gemini-city/city.toml
+[providers.fast-worker]
+base = "antigravity-fast-worker"
+[providers.solid-worker]
+base = "antigravity-solid-worker"
+[providers.deep-thinker]
+base = "antigravity-deep-thinker"
+```
+
+```toml
+# cities/claude-city/city.toml
+[providers.fast-worker]
+base = "claude-fast-worker"
+[providers.solid-worker]
+base = "claude-solid-worker"
+[providers.deep-thinker]
+base = "claude-deep-thinker"
 ```
 
 Now `fast-worker` / `solid-worker` / `deep-thinker` mean **Gemini Flash-Low / Pro-Low /
@@ -63,3 +96,7 @@ and formulas reference only the generic names — identical across cities.
 cd cities/gemini-city
 gc config explain --json --provider deep-thinker | jq '.resolved.args'   # → the Gemini Pro (High) model
 ```
+
+---
+
+[← README](../README.md) · Next: [The mayor →](the-mayor.md)
