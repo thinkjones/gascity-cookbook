@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="416" viewBox="0 0 1200 416" role="img" aria-labelledby="title desc">
+  <title id="title">How a build flows from formula step to model</title>
+  <desc id="desc">A formula step routes to a role, the role's provider is a tier, and the city resolves the tier to a model. Requirements goes to requirements-planner on deep-thinker (Opus or Gemini Pro High); implement goes to implementation-worker on solid-worker (Sonnet or Gemini Pro Low); publish goes to publisher on fast-worker (Haiku or Gemini Flash Low).</desc>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#000000" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1L9 5L1 9" fill="none" stroke="#64748b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="416" rx="4" fill="#f8fafc"/>
+  <rect width="1200" height="416" rx="4" fill="url(#grid)"/>
+  <rect x="0.5" y="0.5" width="1199" height="415" rx="4" fill="none" stroke="#e2e8f0"/>
+  <text x="80" y="72" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="16" font-weight="500" fill="#64748b" letter-spacing="1.6">FORMULA STEP</text>
+  <text x="300" y="72" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="16" font-weight="500" fill="#64748b" letter-spacing="1.6">ROLE</text>
+  <text x="636" y="72" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="16" font-weight="500" fill="#64748b" letter-spacing="1.6">TIER</text>
+  <text x="884" y="72" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="16" font-weight="500" fill="#64748b" letter-spacing="1.6">MODEL · CLAUDE / GEMINI</text>
+  <rect x="48" y="96" width="1104" height="68" rx="4" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="80" y="139" font-family="'Source Serif 4','Source Serif Pro',Georgia,'Times New Roman',serif" font-size="22" font-weight="600" fill="#0f172a">requirements</text>
+  <path d="M252 130H284" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="300" y="138" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="20" font-weight="400" fill="#0f172a">requirements-planner</text>
+  <path d="M568 130H602" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <circle cx="641" cy="130" r="5" fill="#EB5570"/>
+  <text x="660" y="138" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="20" font-weight="600" fill="#0f172a">deep-thinker</text>
+  <path d="M832 130H866" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="884" y="138" font-family="Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="20" font-weight="400" fill="#0f172a">Opus / Gemini Pro (High)</text>
+  <rect x="48" y="184" width="1104" height="68" rx="4" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="80" y="227" font-family="'Source Serif 4','Source Serif Pro',Georgia,'Times New Roman',serif" font-size="22" font-weight="600" fill="#0f172a">implement</text>
+  <path d="M252 218H284" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="300" y="226" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="20" font-weight="400" fill="#0f172a">implementation-worker</text>
+  <path d="M568 218H602" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <circle cx="641" cy="218" r="5" fill="#e85d26"/>
+  <text x="660" y="226" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="20" font-weight="600" fill="#0f172a">solid-worker</text>
+  <path d="M832 218H866" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="884" y="226" font-family="Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="20" font-weight="400" fill="#0f172a">Sonnet / Gemini Pro (Low)</text>
+  <rect x="48" y="272" width="1104" height="68" rx="4" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="80" y="315" font-family="'Source Serif 4','Source Serif Pro',Georgia,'Times New Roman',serif" font-size="22" font-weight="600" fill="#0f172a">publish</text>
+  <path d="M252 306H284" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="300" y="314" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="20" font-weight="400" fill="#0f172a">publisher</text>
+  <path d="M568 306H602" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <circle cx="641" cy="306" r="5" fill="#54C8CE"/>
+  <text x="660" y="314" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="20" font-weight="600" fill="#0f172a">fast-worker</text>
+  <path d="M832 306H866" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="884" y="314" font-family="Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="20" font-weight="400" fill="#0f172a">Haiku / Gemini Flash (Low)</text>
+  <text x="80" y="384" font-family="Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="18" font-weight="400" fill="#475569">A formula names a role, never a model. The role's provider is a tier; the city decides what that tier means.</text>
+</svg>

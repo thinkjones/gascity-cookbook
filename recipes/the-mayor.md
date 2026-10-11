@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="../assets/readme/strip-recipe-2.svg" width="100%" alt="Gas City Cookbook: recipe 2 of 3">
+</p>
+
 # Recipe: the mayor (a single always-on coordinator)
 
 **Goal:** one always-on session per city that plans, triages, dispatches to the right tier,
@@ -80,3 +84,7 @@ gc session reset cc.mayor                # fresh session re-primes on the new pr
 `reset` preserves the session's identity, mail, and queued work — it just swaps in a fresh
 conversation (which re-primes). Restart order matters: **reload before reset** so the fresh
 session launches on the new provider/config.
+
+---
+
+[← Multi-provider tiers](multi-provider-tiers.md) · [README](../README.md) · Next: [Per-role model tiers →](per-role-model-tiers.md)

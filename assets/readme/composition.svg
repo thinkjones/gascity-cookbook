@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="496" viewBox="0 0 1200 496" role="img" aria-labelledby="title desc">
+  <title id="title">How a city is composed</title>
+  <desc id="desc">The shared core-city pack and the remote gascity-packs are imported by each example city. claude-city binds the tiers to Claude and gemini-city binds them to Gemini.</desc>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#000000" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1L9 5L1 9" fill="none" stroke="#64748b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="496" rx="4" fill="#f8fafc"/>
+  <rect width="1200" height="496" rx="4" fill="url(#grid)"/>
+  <rect x="0.5" y="0.5" width="1199" height="495" rx="4" fill="none" stroke="#e2e8f0"/>
+  <rect x="48" y="48" width="472" height="232" rx="4" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="80" y="90" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="16" font-weight="500" fill="#e85d26" letter-spacing="1.6">SHARED PACK</text>
+  <text x="80" y="126" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="22" font-weight="600" fill="#0f172a">packs/core-city</text>
+  <text x="80" y="162" font-family="Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="20" font-weight="400" fill="#475569">Model families × tiers</text>
+  <text x="80" y="192" font-family="Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="20" font-weight="400" fill="#475569">The mayor and its prompt fragments</text>
+  <text x="80" y="222" font-family="Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="20" font-weight="400" fill="#475569">Commands and scheduled orders</text>
+  <text x="80" y="252" font-family="Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="20" font-weight="400" fill="#475569">Role → tier base map</text>
+  <rect x="48" y="304" width="472" height="144" rx="4" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="80" y="346" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="16" font-weight="500" fill="#19a0a6" letter-spacing="1.6">REMOTE PACK</text>
+  <text x="80" y="382" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="22" font-weight="600" fill="#0f172a">gascity-packs</text>
+  <text x="80" y="418" font-family="Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="20" font-weight="400" fill="#475569">Worker roles and build formulas</text>
+  <rect x="680" y="48" width="472" height="188" rx="4" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="712" y="90" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="16" font-weight="500" fill="#64748b" letter-spacing="1.6">CITY</text>
+  <text x="712" y="126" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="22" font-weight="600" fill="#0f172a">cities/claude-city</text>
+  <text x="712" y="162" font-family="Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="20" font-weight="400" fill="#475569">city.toml binds the tiers to Claude</text>
+  <text x="712" y="192" font-family="Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="20" font-weight="400" fill="#475569">model-tiers.toml generated per rig</text>
+  <rect x="680" y="260" width="472" height="188" rx="4" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="712" y="302" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="16" font-weight="500" fill="#64748b" letter-spacing="1.6">CITY</text>
+  <text x="712" y="338" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="22" font-weight="600" fill="#0f172a">cities/gemini-city</text>
+  <text x="712" y="374" font-family="Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="20" font-weight="400" fill="#475569">city.toml binds the tiers to Gemini</text>
+  <text x="712" y="404" font-family="Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="20" font-weight="400" fill="#475569">model-tiers.toml generated per rig</text>
+  <path d="M520 164H600M520 376H600M600 142V376" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M600 142H672" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M600 354H672" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="600" y="118" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="16" font-weight="500" fill="#64748b" letter-spacing="1.6" text-anchor="middle">IMPORTS</text>
+</svg>
